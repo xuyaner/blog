@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<style >
+div{
+	width:200px;
+	height:200px;
+	border:#003 solid 2px
+}
+</style>
+<body> 
+<script>
+window.onload=function(){  
+        var wrap = document.getElementById("div");  
+        var hoverDir = function(e){  
+            var w = wrap.offsetWidth,  
+                h = wrap.offsetHeight,  
+                x = ( e.clientX - wrap.offsetLeft - ( w / 2 ) ) * ( w > h ? ( h / w ) : 1 ),  
+                y = (e.clientY - wrap.offsetTop - (h / 2)) * (h > w ? (w / h) : 1),  
+                // 上(0) 右(1) 下(2) 左(3)  
+                direction = Math.round( ( ( ( Math.atan2( y, x ) * ( 180 / Math.PI ) ) + 180 ) / 90) + 3 ) % 4,  
+                eventType = e.type,  
+                dirName = new Array('上方','右侧','下方','左侧');  
+            if( e.type == 'mouseover' || e.type == 'mouseenter' ){  
+                wrap.innerHTML = dirName[direction] + '进入';  
+            }else{  
+                wrap.innerHTML = dirName[direction] + '离开';  
+            }  
+        }  
+        if( window.addEventListener ){  
+            wrap.addEventListener( 'mouseover',hoverDir,false );  
+            wrap.addEventListener( 'mouseout',hoverDir,false );  
+        }else if( window.attachEvent ){  
+            wrap.attachEvent( 'onmouseenter',hoverDir );  
+            wrap.attachEvent( 'onmouseleave',hoverDir );  
+        }  
+    }  
+    // gaga('gagagaga1');  
+    gaga('gagagaga2');  
+	</script>
+    <div id="div">
+    </div>
+
+</body>
+</html>
