@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>移动UI Demo</title>
+        <script type="text/javascript"  charset="UTF-8"></script>
+        <link rel="stylesheet" href="http://frozenui.github.io/frozenui/css/frozen.css">
+        
+        <script src="http://frozenui.github.io/frozenui/lib/zepto.min.js"></script>
+        <script src="http://frozenui.github.io/frozenui/js/frozen.js"></script>
+        <style type="text/css">
+        #header{
+            background-color: #66cc99;
+        }
+
+        #icon{
+            width:100px;
+            height:100px;
+            line-height: 100px;
+            border: 1px solid black;
+            border-radius: 50px;
+            font-family: Youyuan;
+            font-size: 35px;
+            font-size: bold;
+            color:white;
+            text-align: center;
+            background-color: #66cc99;
+            margin-top: 2%;
+        }
+        .w{
+            margin-top: 3%;
+        }
+        .green{
+            background: #66cc99;
+        }
+       
+    </style>
+    </head>
+    <body ontouchstart>
+     <header id="header" class="ui-header ui-header-positive ui-border-b">
+            <i class="ui-icon-return" onclick="history.back()">
+            </i>
+            <h1>水电滴滴
+            </h1>
+            <button class="ui-btn">回首页
+            </button>
+     </header>
+      <section class="ui-container">
+       
+        <div class="ui-flex ui-flex-pack-center ui-flex-align-center">
+     <div id="icon">水电</div>
+        </div>
+
+    <div class="ui-form ui-border-t w" >
+    <form action="#">
+        <div class="ui-form-item ui-form-item-pure ui-border-b">
+            <input type="text" placeholder="请输入手机号">
+            <a href="#" class="ui-icon-close"></a>
+        </div>
+        <div class="ui-form-item ui-form-item-pure ui-border-b">
+            <input type="password" placeholder="密码">
+            <a href="#" class="ui-icon-close"></a>
+        </div>
+    </form>
+    </div>
+    <div class="ui-btn-wrap">
+    <button class="ui-btn-lg green">
+        登录
+    </button>
+</div>
+ </section>
+    </body>
+    </html>
